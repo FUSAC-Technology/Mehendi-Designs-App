@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MehendiDesignsApp">
         <activity
+            android:name=".View_Design_Activity"
+            android:exported="true" />
+        <activity
             android:name=".RecView_List"
             android:exported="true" />
         <activity

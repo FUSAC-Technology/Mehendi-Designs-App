@@ -13,7 +13,6 @@
         android:elevation="10dp">
 
 
-
         <ImageView
             android:id="@+id/Item_img"
             android:layout_width="match_parent"

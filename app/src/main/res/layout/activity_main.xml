@@ -23,13 +23,14 @@
             android:id="@+id/btn_wedding"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Wedding"/>
+            android:text="Wedding"
+            android:onClick="Wedding_ClickEvent"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_eidSpecial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Eid Special"/>
+            android:text="Eid Special" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_backhand"
@@ -59,7 +60,8 @@
             android:id="@+id/btn_arm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Arm"/>
+            android:text="Arm"
+            android:onClick="Arm_ClickEvent"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_foot"

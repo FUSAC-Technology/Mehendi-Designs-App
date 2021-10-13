@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn_wedding;
+    Button btn_wedding, btn_arm;
     String category;
 
     @Override
@@ -19,24 +19,25 @@ public class MainActivity extends AppCompatActivity {
 
         initialize();
 
-        buttonsClick();
 
     }
 
-    private void buttonsClick() {
-
-        btn_wedding.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                category= "Wedding";
-                Intent intent= new Intent(MainActivity.this, RecView_List.class);
-                intent.putExtra("category_name",category);
-                startActivity(intent);
-            }
-        });
-    }
 
     private void initialize() {
-        btn_wedding=findViewById(R.id.btn_wedding);
     }
+
+    public void Wedding_ClickEvent(View view){
+        category= "Wedding";
+        Intent intent= new Intent(MainActivity.this, RecView_List.class);
+        intent.putExtra("category_name",category);
+        startActivity(intent);
+    }
+
+    public void Arm_ClickEvent(View view){
+        category= "Arm";
+        Intent intent= new Intent(MainActivity.this, RecView_List.class);
+        intent.putExtra("category_name",category);
+        startActivity(intent);
+    }
+
 }

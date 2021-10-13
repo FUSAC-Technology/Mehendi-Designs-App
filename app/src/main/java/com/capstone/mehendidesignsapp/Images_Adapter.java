@@ -2,6 +2,7 @@ package com.capstone.mehendidesignsapp;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,9 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.room.Database;
+
+
 
 import java.util.List;
 
@@ -34,9 +38,19 @@ public class Images_Adapter extends RecyclerView.Adapter<Images_Adapter.MyViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Images_Adapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull Images_Adapter.MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.imageView.setImageDrawable(img_list.get(position));
 
+        holder.imageCardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent (context, View_Design_Activity.class);
+                intent.putExtra("image_position", position);
+                intent.putExtra("categoryName", category_name);
+                context.startActivity(intent);
+            }
+        });
 
     }
 
