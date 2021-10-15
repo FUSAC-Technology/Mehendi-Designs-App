@@ -21,11 +21,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
+        <com.github.chrisbanes.photoview.PhotoView
             android:id="@+id/mehendi_img"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="fitCenter" />
+            android:scaleType="fitCenter"
+            tools:ignore="MissingClass" />
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:layout_width="45dp"

@@ -13,11 +13,13 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.github.chrisbanes.photoview.PhotoView;
+
 import java.io.IOException;
 import java.io.InputStream;
 
 public class View_Design_Activity extends AppCompatActivity {
-    ImageView imageView;
+    PhotoView photoView;
     String title;
 
     @Override
@@ -46,27 +48,27 @@ public class View_Design_Activity extends AppCompatActivity {
 
             title= images[position];
 
-            imageView.setImageDrawable(d);
+            photoView.setImageDrawable(d);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     private void initialize() {
-        imageView=findViewById(R.id.mehendi_img);
+        photoView=findViewById(R.id.mehendi_img);
     }
 
     public void DownloadClick(View view){
-        imageView.setDrawingCacheEnabled(true);
-        Bitmap bitmap = imageView.getDrawingCache();
+        photoView.setDrawingCacheEnabled(true);
+        Bitmap bitmap = photoView.getDrawingCache();
         MediaStore.Images.Media.insertImage(this.getContentResolver(), bitmap,title, null);
 
         Toast.makeText(View_Design_Activity.this, "Downloading...", Toast.LENGTH_SHORT).show();
     }
 
     public void ShareClick(View view){
-        imageView.setDrawingCacheEnabled(true);
-        Bitmap bitmap = imageView.getDrawingCache();
+        photoView.setDrawingCacheEnabled(true);
+        Bitmap bitmap = photoView.getDrawingCache();
 
         String bitmapPath = MediaStore.Images.Media.insertImage(getContentResolver(), bitmap,"title", null);
         Uri bitmapUri = Uri.parse(bitmapPath);

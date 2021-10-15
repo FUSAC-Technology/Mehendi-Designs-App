@@ -1,76 +1,328 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginHorizontal="20dp"
-        android:columnCount="2"
-        android:nestedScrollingEnabled="true"
-        android:rowCount="4"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_wedding"
+        <GridLayout
+            android:id="@+id/gridLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Wedding"
-            android:onClick="Wedding_ClickEvent"/>
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="20dp"
+            android:columnCount="2"
+            android:nestedScrollingEnabled="true"
+            android:rowCount="4"
+            tools:context=".MainActivity">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_eidSpecial"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Eid Special" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_wedding"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical"
+                app:cardCornerRadius="20dp"
+                android:onClick="Wedding_ClickEvent">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_backhand"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Back Hand"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/wedding" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_frontHand"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Front Hand"/>
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_golTikki"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Gol Tikki"/>
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_finger"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Finger"/>
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_arm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Arm"
-            android:onClick="Arm_ClickEvent"/>
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_foot"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Foot"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
+                    android:background="@color/card_text_bg"
+                    android:gravity="center"
+                    android:text="Wedding"
+                    android:textColor="@color/white" />
 
 
+            </androidx.cardview.widget.CardView>
 
-    </GridLayout>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_EidSpec"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:clipToOutline="true"
+                android:orientation="vertical"
+                app:cardCornerRadius="20dp"
+                android:onClick="EidSpecial_ClickEvent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/eid_special" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
+                    android:background="#4B4949"
+                    android:gravity="center"
+                    android:text="Eid Special"
+                    android:textColor="@color/white" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_backHand"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginRight="10dp"
+                android:clipToOutline="true"
+                android:orientation="vertical"
+                app:cardCornerRadius="20dp"
+                android:layout_marginBottom="30dp"
+                android:onClick="BackHand_ClickEvent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/back_hand" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
+                    android:background="#4B4949"
+                    android:gravity="center"
+                    android:text="Back Hand"
+                    android:textColor="@color/white" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_fronHand"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:clipToOutline="true"
+                android:orientation="vertical"
+                app:cardCornerRadius="20dp"
+                android:onClick="FrontHand_ClickEvent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/front_hand" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
+                    android:background="#4B4949"
+                    android:gravity="center"
+                    android:text="Front Hand"
+                    android:textColor="@color/white" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_golTikki"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical"
+                app:cardCornerRadius="20dp"
+                android:onClick="GolTikki_ClickEvent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/gol_tikki" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
+                    android:background="#4B4949"
+                    android:gravity="center"
+                    android:text="Gol Tikki"
+                    android:textColor="@color/white" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_finger"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:clipToOutline="true"
+                android:orientation="vertical"
+                app:cardCornerRadius="20dp"
+                android:onClick="Finger_ClickEvent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/finger" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
+                    android:background="#4B4949"
+                    android:gravity="center"
+                    android:text="Finger"
+                    android:textColor="@color/white" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_arm"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginRight="10dp"
+                android:clipToOutline="true"
+                android:orientation="vertical"
+                app:cardCornerRadius="20dp"
+                android:onClick="Arm_ClickEvent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/arm" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
+                    android:background="#4B4949"
+                    android:gravity="center"
+                    android:text="Arm"
+                    android:textColor="@color/white" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_foot"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:clipToOutline="true"
+                android:orientation="vertical"
+                app:cardCornerRadius="20dp"
+                android:onClick="Foot_ClickEvent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/foot" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
+                    android:background="#4B4949"
+                    android:gravity="center"
+                    android:text="Foot"
+                    android:textColor="@color/white" />
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+        </GridLayout>
+
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <!--    <GridLayout-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center_horizontal"-->
+    <!--        android:layout_marginHorizontal="20dp"-->
+    <!--        android:columnCount="2"-->
+    <!--        android:nestedScrollingEnabled="true"-->
+    <!--        android:rowCount="4"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" >-->
+
+
+
+    <!--        <androidx.appcompat.widget.AppCompatButton-->
+    <!--            android:id="@+id/btn_wedding"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Wedding"-->
+    <!--            android:onClick="Wedding_ClickEvent"/>-->
+
+    <!--        <androidx.appcompat.widget.AppCompatButton-->
+    <!--            android:id="@+id/btn_eidSpecial"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Eid Special"-->
+    <!--            android:onClick="EidSpecial_ClickEvent"/>-->
+
+    <!--        <androidx.appcompat.widget.AppCompatButton-->
+    <!--            android:id="@+id/btn_backhand"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Back Hand"-->
+    <!--            android:onClick="BackHand_ClickEvent"/>-->
+
+    <!--        <androidx.appcompat.widget.AppCompatButton-->
+    <!--            android:id="@+id/btn_frontHand"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Front Hand"-->
+    <!--            android:onClick="FrontHand_ClickEvent"/>-->
+
+    <!--        <androidx.appcompat.widget.AppCompatButton-->
+    <!--            android:id="@+id/btn_golTikki"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Gol Tikki"-->
+    <!--            android:onClick="GolTikki_ClickEvent"/>-->
+
+    <!--        <androidx.appcompat.widget.AppCompatButton-->
+    <!--            android:id="@+id/btn_finger"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Finger"-->
+    <!--            android:onClick="Finger_ClickEvent"/>-->
+
+    <!--        <androidx.appcompat.widget.AppCompatButton-->
+    <!--            android:id="@+id/btn_arm"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Arm"-->
+    <!--            android:onClick="Arm_ClickEvent"/>-->
+
+    <!--        <androidx.appcompat.widget.AppCompatButton-->
+    <!--            android:id="@+id/btn_foot"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Foot"-->
+    <!--            android:onClick="Foot_ClickEvent"/>-->
+
+
+
+    <!--    </GridLayout>-->
