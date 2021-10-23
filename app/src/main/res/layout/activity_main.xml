@@ -10,7 +10,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -32,9 +32,9 @@
                 android:layout_height="150dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="30dp"
+                android:onClick="Wedding_ClickEvent"
                 android:orientation="vertical"
-                app:cardCornerRadius="20dp"
-                android:onClick="Wedding_ClickEvent">
+                app:cardCornerRadius="20dp">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -58,9 +58,9 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:clipToOutline="true"
+                android:onClick="EidSpecial_ClickEvent"
                 android:orientation="vertical"
-                app:cardCornerRadius="20dp"
-                android:onClick="EidSpecial_ClickEvent">
+                app:cardCornerRadius="20dp">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -84,16 +84,17 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_marginRight="10dp"
-                android:clipToOutline="true"
-                android:orientation="vertical"
-                app:cardCornerRadius="20dp"
                 android:layout_marginBottom="30dp"
-                android:onClick="BackHand_ClickEvent">
+                android:clipToOutline="true"
+                android:onClick="BackHand_ClickEvent"
+                android:orientation="vertical"
+                app:cardCornerRadius="20dp">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/back_hand" />
+                    android:src="@drawable/back_hand"
+                    android:scaleType="fitXY"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -112,9 +113,9 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:clipToOutline="true"
+                android:onClick="FrontHand_ClickEvent"
                 android:orientation="vertical"
-                app:cardCornerRadius="20dp"
-                android:onClick="FrontHand_ClickEvent">
+                app:cardCornerRadius="20dp">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -139,9 +140,9 @@
                 android:layout_height="150dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="30dp"
+                android:onClick="GolTikki_ClickEvent"
                 android:orientation="vertical"
-                app:cardCornerRadius="20dp"
-                android:onClick="GolTikki_ClickEvent">
+                app:cardCornerRadius="20dp">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -165,9 +166,9 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:clipToOutline="true"
+                android:onClick="Finger_ClickEvent"
                 android:orientation="vertical"
-                app:cardCornerRadius="20dp"
-                android:onClick="Finger_ClickEvent">
+                app:cardCornerRadius="20dp">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -192,9 +193,9 @@
                 android:layout_height="150dp"
                 android:layout_marginRight="10dp"
                 android:clipToOutline="true"
+                android:onClick="Arm_ClickEvent"
                 android:orientation="vertical"
-                app:cardCornerRadius="20dp"
-                android:onClick="Arm_ClickEvent">
+                app:cardCornerRadius="20dp">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -218,9 +219,9 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:clipToOutline="true"
+                android:onClick="Foot_ClickEvent"
                 android:orientation="vertical"
-                app:cardCornerRadius="20dp"
-                android:onClick="Foot_ClickEvent">
+                app:cardCornerRadius="20dp">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -240,89 +241,27 @@
             </androidx.cardview.widget.CardView>
 
 
-
-
         </GridLayout>
 
 
     </ScrollView>
 
+    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+        android:id="@+id/bnv_Main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_weight="1"
+        app:mbn_backgroundBottomColor="@color/theme_color"
+        app:mbn_circleColor="@color/theme_color"
+        app:mbn_countBackgroundColor="@color/black"
+        app:mbn_countTextColor="#ffffff"
+        app:mbn_defaultIconColor="@color/black"
+        app:mbn_rippleColor="#2f424242"
+        app:mbn_selectedIconColor="@color/white"
+        app:mbn_shadowColor="#1f212121" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-    <!--    <GridLayout-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_gravity="center_horizontal"-->
-    <!--        android:layout_marginHorizontal="20dp"-->
-    <!--        android:columnCount="2"-->
-    <!--        android:nestedScrollingEnabled="true"-->
-    <!--        android:rowCount="4"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent" >-->
-
-
-
-    <!--        <androidx.appcompat.widget.AppCompatButton-->
-    <!--            android:id="@+id/btn_wedding"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:text="Wedding"-->
-    <!--            android:onClick="Wedding_ClickEvent"/>-->
-
-    <!--        <androidx.appcompat.widget.AppCompatButton-->
-    <!--            android:id="@+id/btn_eidSpecial"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:text="Eid Special"-->
-    <!--            android:onClick="EidSpecial_ClickEvent"/>-->
-
-    <!--        <androidx.appcompat.widget.AppCompatButton-->
-    <!--            android:id="@+id/btn_backhand"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:text="Back Hand"-->
-    <!--            android:onClick="BackHand_ClickEvent"/>-->
-
-    <!--        <androidx.appcompat.widget.AppCompatButton-->
-    <!--            android:id="@+id/btn_frontHand"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:text="Front Hand"-->
-    <!--            android:onClick="FrontHand_ClickEvent"/>-->
-
-    <!--        <androidx.appcompat.widget.AppCompatButton-->
-    <!--            android:id="@+id/btn_golTikki"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:text="Gol Tikki"-->
-    <!--            android:onClick="GolTikki_ClickEvent"/>-->
-
-    <!--        <androidx.appcompat.widget.AppCompatButton-->
-    <!--            android:id="@+id/btn_finger"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:text="Finger"-->
-    <!--            android:onClick="Finger_ClickEvent"/>-->
-
-    <!--        <androidx.appcompat.widget.AppCompatButton-->
-    <!--            android:id="@+id/btn_arm"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:text="Arm"-->
-    <!--            android:onClick="Arm_ClickEvent"/>-->
-
-    <!--        <androidx.appcompat.widget.AppCompatButton-->
-    <!--            android:id="@+id/btn_foot"-->
-    <!--            android:layout_width="wrap_content"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:text="Foot"-->
-    <!--            android:onClick="Foot_ClickEvent"/>-->
-
-
-
-    <!--    </GridLayout>-->

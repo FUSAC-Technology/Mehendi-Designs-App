@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/DELL/AndroidStudioProjects/Mehendi-Designs-App/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/ZONE TECH/AndroidStudioProjects/MehendiDesignsApp/app/src/main/res/drawable/button_shape.xml" value="0.14444444444444443" />
         <entry key="..\:/Users/ZONE TECH/AndroidStudioProjects/MehendiDesignsApp/app/src/main/res/drawable/cardview_shape.xml" value="0.1574074074074074" />
         <entry key="..\:/Users/ZONE TECH/AndroidStudioProjects/MehendiDesignsApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
@@ -12,7 +13,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
