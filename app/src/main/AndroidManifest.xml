@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.capstone.mehendidesignsapp">
-    
-    <uses-permission android:name="android.permission.INTERNET"/>
+    package="com.capstone.new_latest_mehndi_designs_2021">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -12,16 +14,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MehendiDesignsApp">
         <activity
-            android:name=".MainActivity"
+            android:name="com.capstone.new_latest_mehndi_designs_2021.Exit_Activity"
             android:exported="true" />
         <activity
-            android:name=".View_Design_Activity"
+            android:name="com.capstone.new_latest_mehndi_designs_2021.MainActivity"
             android:exported="true" />
         <activity
-            android:name=".RecView_List"
+            android:name="com.capstone.new_latest_mehndi_designs_2021.View_Design_Activity"
             android:exported="true" />
         <activity
-            android:name=".Splash_Screen"
+            android:name="com.capstone.new_latest_mehndi_designs_2021.RecView_List"
+            android:exported="true" />
+        <activity
+            android:name="com.capstone.new_latest_mehndi_designs_2021.Splash_Screen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,8 +37,7 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="@string/Application_ID"/>
-
+            android:value="@string/Application_ID" />
     </application>
 
 </manifest>

@@ -6,8 +6,8 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.capstone.mehendidesignsapp"
-        minSdk 16
+        applicationId "com.capstone.new_latest_mehndi_designs_2021"
+        minSdk 18
         targetSdk 31
         versionCode 1
         versionName "1.0"
