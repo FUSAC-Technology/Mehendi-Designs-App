@@ -9,14 +9,16 @@ import android.view.View;
 import android.widget.Button;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.google.android.gms.ads.AdView;
 
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Base_Class {
 
     private MeowBottomNavigation bnv_Main;
     String category;
+    AdView banner_Adview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +29,15 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavMenu();
 
+        bannerAd(banner_Adview);
+
 
     }
 
 
     private void initialize() {
         bnv_Main= findViewById(R.id.bnv_Main);
+        banner_Adview=findViewById(R.id.banner_adview);
     }
 
     public void Wedding_ClickEvent(View view){
@@ -40,6 +45,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent= new Intent(MainActivity.this, RecView_List.class);
         intent.putExtra("category_name",category);
         startActivity(intent);
+
+        //interstitial Ad
+        loadInterstitial(MainActivity.this);
+        showInterstitial(MainActivity.this);
     }
 
     public void Arm_ClickEvent(View view){
@@ -47,6 +56,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent= new Intent(MainActivity.this, RecView_List.class);
         intent.putExtra("category_name",category);
         startActivity(intent);
+
+        //interstitial Ad
+        loadInterstitial(MainActivity.this);
+        showInterstitial(MainActivity.this);
     }
 
     public void EidSpecial_ClickEvent(View view){
@@ -54,6 +67,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent= new Intent(MainActivity.this, RecView_List.class);
         intent.putExtra("category_name",category);
         startActivity(intent);
+
+        //interstitial Ad
+        loadInterstitial(MainActivity.this);
+        showInterstitial(MainActivity.this);
     }
 
     public void BackHand_ClickEvent(View view){
@@ -61,6 +78,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent= new Intent(MainActivity.this, RecView_List.class);
         intent.putExtra("category_name",category);
         startActivity(intent);
+
+        //interstitial Ad
+        loadInterstitial(MainActivity.this);
+        showInterstitial(MainActivity.this);
     }
 
     public void FrontHand_ClickEvent(View view){
@@ -68,6 +89,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent= new Intent(MainActivity.this, RecView_List.class);
         intent.putExtra("category_name",category);
         startActivity(intent);
+
+        //interstitial Ad
+        loadInterstitial(MainActivity.this);
+        showInterstitial(MainActivity.this);
     }
 
     public void GolTikki_ClickEvent(View view){
@@ -75,6 +100,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent= new Intent(MainActivity.this, RecView_List.class);
         intent.putExtra("category_name",category);
         startActivity(intent);
+
+        //interstitial Ad
+        loadInterstitial(MainActivity.this);
+        showInterstitial(MainActivity.this);
     }
 
     public void Finger_ClickEvent(View view){
@@ -82,6 +111,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent= new Intent(MainActivity.this, RecView_List.class);
         intent.putExtra("category_name",category);
         startActivity(intent);
+
+        //interstitial Ad
+        loadInterstitial(MainActivity.this);
+        showInterstitial(MainActivity.this);
     }
 
     public void Foot_ClickEvent(View view){
@@ -89,6 +122,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent= new Intent(MainActivity.this, RecView_List.class);
         intent.putExtra("category_name",category);
         startActivity(intent);
+
+        //interstitial Ad
+        loadInterstitial(MainActivity.this);
+        showInterstitial(MainActivity.this);
     }
 
     private void bottomNavMenu() {

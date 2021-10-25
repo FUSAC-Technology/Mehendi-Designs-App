@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Mehendi Designs App</string>
+
+    <!--    Test ads ids-->
+        <string name="native_id">ca-app-pub-3940256099942544/2247696110</string>
+        <string name="inter_id">ca-app-pub-3940256099942544/1033173712</string>
+        <string name="banner_id">ca-app-pub-3940256099942544/6300978111</string>
+        <string name="Application_ID">ca-app-pub-3940256099942544~3347511713</string>
+
+    <!--    Real Ads ids-->
+<!--    <string name="Application_ID"></string>-->
+<!--    <string name="native_id"></string>-->
+<!--    <string name="inter_id"></string>-->
+<!--    <string name="banner_id"></string>-->
 </resources>
